@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { login } from '../../redux/auth/authOperations';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -25,6 +27,7 @@ const LoginPage = () => {
       try {
         const userData = await dispatch(login(values)).unwrap();
         localStorage.setItem('token', userData.token);
+        axios.defaults.headers.common['Authorization'] = `Bearer ${userData.token}`;
         navigate('/contacts');
       } catch (error) {
         const errorMessage = 'Invalid email or password';
