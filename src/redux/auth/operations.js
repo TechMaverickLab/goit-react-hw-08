@@ -17,11 +17,14 @@ export const register = createAsyncThunk('auth/register', async (userData, { rej
 export const login = createAsyncThunk('auth/login', async (userData, { rejectWithValue }) => {
   try {
     const response = await axios.post('/users/login', userData);
+    localStorage.setItem('token', response.data.token);
+    axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
     return response.data;
   } catch (error) {
     return rejectWithValue(error.response ? error.response.data : error);
   }
 });
+
 
 export const getCurrentUser = createAsyncThunk('auth/getCurrentUser', async (_, { getState, rejectWithValue }) => {
   const state = getState();

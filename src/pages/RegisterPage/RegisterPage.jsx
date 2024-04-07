@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { register } from '../../redux/auth/authOperations';
+import { register } from '../../redux/auth/operations';
 import { useSelector } from 'react-redux';
-import { selectAuthError } from '../../redux/auth/authSelectors';
+import { selectAuthError } from '../../redux/auth/selectors';
 import { useNavigate } from 'react-router-dom'; 
 import { Link } from 'react-router-dom';
 

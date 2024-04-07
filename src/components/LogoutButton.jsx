@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../redux/auth/authSlice';
-import { selectCurrentUser } from '../redux/auth/authSelectors'; 
+import { logout } from '../redux/auth/slice';
+import { selectCurrentUser } from '../redux/auth/selectors'; 
 import { useNavigate } from 'react-router-dom'; 
 import axios from 'axios';
 
