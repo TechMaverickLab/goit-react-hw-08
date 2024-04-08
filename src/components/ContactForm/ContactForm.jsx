@@ -25,9 +25,10 @@ const ContactForm = () => {
     },
     validationSchema,
     onSubmit: (values, { resetForm }) => {
-      dispatch(addContact(values));
+      dispatch(addContact(values));     
       resetForm();
     },
+    
   });
 
   return (
@@ -52,7 +53,7 @@ const ContactForm = () => {
           defaultCountry="US"
           value={formik.values.number}
           onChange={(value) => formik.setFieldValue('number', value)}
-          className={styles.input}
+          className={styles.phone_input}
         />
         {formik.touched.number && formik.errors.number ? (
           <div>{formik.errors.number}</div>

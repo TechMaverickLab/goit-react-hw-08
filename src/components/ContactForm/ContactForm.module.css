@@ -9,13 +9,20 @@
 .label {
   display: block;
   margin-bottom: 10px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
-.input,
-.button {
-  width: 100%;
+.input {
+  width: 80%;
   padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.phone_input {
+  width: 80%;
+  padding: 10px;
+  margin-left: 10px;
   margin-top: 5px;
   border-radius: 5px;
   border: 1px solid #ddd;
@@ -25,6 +32,11 @@
   background-color: #4caf50;
   color: white;
   cursor: pointer;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 85%;
 }
 
 .button:hover {

@@ -23,8 +23,9 @@ const EditContactForm = ({ contact, onClose }) => {
     }),
     onSubmit: (values) => {
       dispatch(editContact({ id: contact.id, data: values }));
-      onClose(); 
+      onClose();
     },
+    
   });
 
   return (

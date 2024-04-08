@@ -1,16 +1,19 @@
 import PropTypes from 'prop-types';
 import { Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { selectIsAuthenticated } from '../redux/auth/selectors';
+import { selectIsAuthenticated, selectIsRefreshing } from '../redux/auth/selectors';
 
-const RestrictedRoute = ({ children }) => {
+const RestrictedRoute = ({ component: Component, redirectTo = '/contacts' }) => {
   const isAuthenticated = useSelector(selectIsAuthenticated);
+  const isRefreshing = useSelector(selectIsRefreshing);
 
-  return isAuthenticated ? <Navigate to="/contacts" /> : children;
+  if (isRefreshing) return <div>Loading...</div>;
+  return !isAuthenticated ? <Component /> : <Navigate to={redirectTo} />;
 };
 
 RestrictedRoute.propTypes = {
-  children: PropTypes.node.isRequired,
+  component: PropTypes.elementType.isRequired,
+  redirectTo: PropTypes.string,
 };
 
 export default RestrictedRoute;

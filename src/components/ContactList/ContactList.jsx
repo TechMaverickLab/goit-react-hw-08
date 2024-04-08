@@ -13,10 +13,11 @@ const ContactList = () => {
   const handleDelete = (id) => {
     dispatch(deleteContact(id));
   };
-
+  
   const handleEdit = (id) => {
     setEditingContactId(id);
   };
+  
 
   const handleCloseEditForm = () => {
     setEditingContactId(null);

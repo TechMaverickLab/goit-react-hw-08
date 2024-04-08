@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../redux/auth/slice';
+import { logout } from '../redux/auth/operations';
 import { selectCurrentUser } from '../redux/auth/selectors'; 
 import { useNavigate } from 'react-router-dom'; 
 import axios from 'axios';
@@ -12,9 +12,10 @@ const LogoutButton = () => {
   const handleLogout = () => {
     dispatch(logout());
     localStorage.removeItem('token');
-    axios.defaults.headers.common['Authorization'] = ''; 
-    navigate('/login'); 
+    axios.defaults.headers.common['Authorization'] = '';
+    navigate('/login');
   };
+  
 
   return (
     <div>

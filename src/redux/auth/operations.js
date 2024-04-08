@@ -10,7 +10,8 @@ export const register = createAsyncThunk('auth/register', async (userData, { rej
     axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
     return response.data;
   } catch (error) {
-    return rejectWithValue(error.response ? error.response.data : {message: error.message});
+    console.error('Register error:', error);
+    return rejectWithValue(error.response?.data?.message || error.message || 'Unknown error');
   }
 });
 
@@ -21,12 +22,12 @@ export const login = createAsyncThunk('auth/login', async (userData, { rejectWit
     axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
     return response.data;
   } catch (error) {
-    return rejectWithValue(error.response ? error.response.data : error);
+    return rejectWithValue(error.response?.data?.message || error.message || 'Unknown error');
   }
 });
 
 
-export const getCurrentUser = createAsyncThunk('auth/getCurrentUser', async (_, { getState, rejectWithValue }) => {
+export const refreshUser = createAsyncThunk('auth/refreshUser', async (_, { getState, rejectWithValue }) => {
   const state = getState();
   const token = state.auth.token;
 
@@ -36,6 +37,16 @@ export const getCurrentUser = createAsyncThunk('auth/getCurrentUser', async (_, 
     const response = await axios.get('/users/current');
     return response.data;
   } catch (error) {
-    return rejectWithValue(error.response ? error.response.data : error);
+    return rejectWithValue(error.response?.data?.message || error.message || 'Unknown error');
+  }
+});
+
+export const logout = createAsyncThunk('auth/logout', async (_, { rejectWithValue }) => {
+  try {
+    localStorage.removeItem('token');
+    axios.defaults.headers.common['Authorization'] = '';
+    return true;
+  } catch (error) {
+    return rejectWithValue('Failed to log out');
   }
 });

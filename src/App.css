@@ -45,7 +45,7 @@
   display: block;
   color: #646cff;
   text-decoration: none;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .home-link:hover {
@@ -65,7 +65,7 @@
   margin-top: 20px;
 }
 
-.form-container {
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,13 +84,24 @@ a:focus {
   color: #080896;
 }
 
-.form-element.button {
-  width: 50%;
+.button {
+  width: 100%;
   margin: 0 auto;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #45a049;
 }
 
 .element-button {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -100,4 +111,26 @@ a:focus {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ddd;
+}
+
+#email,
+#password,
+#name {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.home-link:hover {
+  text-decoration: none;
+  color: #272d8f;
+}
+
+.AuthNav a:hover {
+  color: #272d8f;
 }
