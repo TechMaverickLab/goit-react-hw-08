@@ -4,7 +4,7 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import authReducer from './auth/slice';
 import contactsReducer from './contacts/slice';
-import filtersReducer from './filters/filtersSlice';
+import filtersReducer from './filters/slice';
 
 const authPersistConfig = {
   key: 'auth',
@@ -23,9 +23,10 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE'],
+        ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE', 'auth/login/pending', 'auth/login/fulfilled', 'auth/login/rejected'],
       },
     }),
 });
+
 
 export const persistor = persistStore(store);

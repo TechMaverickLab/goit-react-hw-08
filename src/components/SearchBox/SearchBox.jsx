@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { changeFilter, selectFilter } from '../../redux/filters/filtersSlice';
+import { changeFilter } from '../../redux/filters/slice'; // Забезпечуємо, що шлях до файлу правильний
 import styles from './SearchBox.module.css';
 
 const SearchBox = () => {
-  const filter = useSelector(selectFilter);
+  const filter = useSelector((state) => state.filters.name); // Отримуємо поточне значення фільтра з Redux state
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
-    dispatch(changeFilter(e.target.value));
+    dispatch(changeFilter(e.target.value)); // Відправляємо нове значення фільтра в Redux
   };
 
   return (
@@ -17,7 +17,7 @@ const SearchBox = () => {
         value={filter}
         onChange={handleChange}
         className={styles.input}
-        placeholder="Search contacts by name"
+        placeholder="Search contacts by name or number" // Оновлення плейсхолдера для відображення можливості пошуку
       />
     </div>
   );

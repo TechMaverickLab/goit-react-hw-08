@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { editContact } from '../../redux/contacts/operations';
-import styles from './EditContactForm.module.css';
+import styles from './TaskEditor.module.css';
 import PropTypes from 'prop-types'; 
 
 const EditContactForm = ({ contact, onClose }) => {

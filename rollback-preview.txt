@@ -1,0 +1,2498 @@
+Існуючий код для файлу index.html:
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;/vite.svg&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Contacts Book App&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.jsx&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+Відкат буде здійснено до наступної версії коду для файлу index.html:
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts Book App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+Існуючий код для файлу package.json:
+{
+  &quot;name&quot;: &quot;goit-react-hw-08&quot;,
+  &quot;private&quot;: true,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;type&quot;: &quot;module&quot;,
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;vite&quot;,
+    &quot;build&quot;: &quot;vite build&quot;,
+    &quot;lint&quot;: &quot;eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0&quot;,
+    &quot;preview&quot;: &quot;vite preview&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;@reduxjs/toolkit&quot;: &quot;^2.2.3&quot;,
+    &quot;axios&quot;: &quot;^1.6.8&quot;,
+    &quot;formik&quot;: &quot;^2.4.5&quot;,
+    &quot;prop-types&quot;: &quot;^15.8.1&quot;,
+    &quot;react&quot;: &quot;^18.2.0&quot;,
+    &quot;react-dom&quot;: &quot;^18.2.0&quot;,
+    &quot;react-phone-number-input&quot;: &quot;^3.3.12&quot;,
+    &quot;react-redux&quot;: &quot;^9.1.0&quot;,
+    &quot;react-router-dom&quot;: &quot;^6.22.3&quot;,
+    &quot;redux-logger&quot;: &quot;^3.0.6&quot;,
+    &quot;redux-persist&quot;: &quot;^6.0.0&quot;,
+    &quot;yup&quot;: &quot;^1.4.0&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@types/react&quot;: &quot;^18.2.66&quot;,
+    &quot;@types/react-dom&quot;: &quot;^18.2.22&quot;,
+    &quot;@vitejs/plugin-react&quot;: &quot;^4.2.1&quot;,
+    &quot;eslint&quot;: &quot;^8.57.0&quot;,
+    &quot;eslint-plugin-react&quot;: &quot;^7.34.1&quot;,
+    &quot;eslint-plugin-react-hooks&quot;: &quot;^4.6.0&quot;,
+    &quot;eslint-plugin-react-refresh&quot;: &quot;^0.4.6&quot;,
+    &quot;vite&quot;: &quot;^5.2.0&quot;
+  },
+  &quot;bin&quot;: {
+    &quot;generate-structure&quot;: &quot;./index.js&quot;
+  }
+}
+
+Відкат буде здійснено до наступної версії коду для файлу package.json:
+{
+  "name": "goit-react-hw-08",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.3",
+    "axios": "^1.6.8",
+    "formik": "^2.4.5",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-phone-number-input": "^3.3.12",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.22.3",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "vite": "^5.2.0"
+  },
+  "bin": {
+    "generate-structure": "./index.js"
+  }
+}
+
+Існуючий код для файлу src/components/App.css:
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.home-link {
+  display: block;
+  color: #646cff;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  min-width: 250px;
+  width: 100%;
+}
+
+.home-link-container {
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+.home-link:focus {
+  color: #080896;
+}
+
+.button {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.element-button {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.form-aria {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#email,
+#password,
+#name {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.home-link:hover {
+  text-decoration: none;
+  color: #272d8f;
+}
+
+.AuthNav a:hover {
+  color: #272d8f;
+}
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/App.css:
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.home-link {
+  display: block;
+  color: #646cff;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  min-width: 250px;
+  width: 100%;
+}
+
+.home-link-container {
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+.home-link:focus {
+  color: #080896;
+}
+
+.button {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.element-button {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.form-aria {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#email,
+#password,
+#name {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.home-link:hover {
+  text-decoration: none;
+  color: #272d8f;
+}
+
+.AuthNav a:hover {
+  color: #272d8f;
+}
+
+Існуючий код для файлу src/components/App.jsx:
+import { Routes, Route } from &#039;react-router-dom&#039;;
+import { Suspense, lazy, useEffect } from &#039;react&#039;;
+import { useDispatch, useSelector } from &#039;react-redux&#039;;
+import PrivateRoute from &#039;./PrivateRoute&#039;;
+import RestrictedRoute from &#039;./RestrictedRoute&#039;;
+import Layout from &#039;./Layout&#039;;
+import { refreshUser } from &#039;../redux/auth/operations&#039;;
+import { selectIsRefreshing } from &#039;../redux/auth/selectors&#039;; // Потрібно експортувати та використовувати правильний селектор
+import &#039;./App.css&#039;;
+
+const HomePage = lazy(() =&gt; import(&#039;../pages/Home&#039;));
+const RegisterPage = lazy(() =&gt; import(&#039;../pages/Registration&#039;));
+const LoginPage = lazy(() =&gt; import(&#039;../pages/Login&#039;));
+const ContactsPage = lazy(() =&gt; import(&#039;../pages/Contacts&#039;));
+
+const App = () =&gt; {
+  const dispatch = useDispatch();
+  const isRefreshing = useSelector(selectIsRefreshing); // Додаємо використання селектора для стану оновлення
+
+  useEffect(() =&gt; {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
+  if (isRefreshing) {
+    return &lt;div&gt;Loading...&lt;/div&gt;; // Додаємо умовний рендеринг для обробки стану оновлення
+  }
+
+  return (
+    &lt;Suspense fallback={&lt;div&gt;Loading...&lt;/div&gt;}&gt;
+      &lt;Layout&gt;
+        &lt;Routes&gt;
+          &lt;Route path=&quot;/&quot; element={&lt;HomePage /&gt;} /&gt;
+          &lt;Route 
+            path=&quot;/register&quot; 
+            element={&lt;RestrictedRoute component={RegisterPage} /&gt;}
+          /&gt;
+          &lt;Route 
+            path=&quot;/login&quot; 
+            element={&lt;RestrictedRoute component={LoginPage} /&gt;}
+          /&gt;
+          &lt;Route 
+            path=&quot;/contacts&quot; 
+            element={&lt;PrivateRoute&gt;&lt;ContactsPage /&gt;&lt;/PrivateRoute&gt;}
+          /&gt;
+        &lt;/Routes&gt;
+      &lt;/Layout&gt;
+    &lt;/Suspense&gt;
+  );
+};
+
+export default App;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/App.jsx:
+import { Routes, Route } from 'react-router-dom';
+import { Suspense, lazy, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import PrivateRoute from './PrivateRoute';
+import RestrictedRoute from './RestrictedRoute';
+import Layout from './Layout';
+import { refreshUser } from '../redux/auth/operations';
+import { selectIsRefreshing } from '../redux/auth/selectors'; // Потрібно експортувати та використовувати правильний селектор
+import './App.css';
+
+const HomePage = lazy(() => import('../pages/Home'));
+const RegisterPage = lazy(() => import('../pages/Registration'));
+const LoginPage = lazy(() => import('../pages/Login'));
+const ContactsPage = lazy(() => import('../pages/Contacts'));
+
+const App = () => {
+  const dispatch = useDispatch();
+  const isRefreshing = useSelector(selectIsRefreshing); // Додаємо використання селектора для стану оновлення
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
+  if (isRefreshing) {
+    return <div>Loading...</div>; // Додаємо умовний рендеринг для обробки стану оновлення
+  }
+
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route 
+            path="/register" 
+            element={<RestrictedRoute component={RegisterPage} />}
+          />
+          <Route 
+            path="/login" 
+            element={<RestrictedRoute component={LoginPage} />}
+          />
+          <Route 
+            path="/contacts" 
+            element={<PrivateRoute><ContactsPage /></PrivateRoute>}
+          />
+        </Routes>
+      </Layout>
+    </Suspense>
+  );
+};
+
+export default App;
+
+Існуючий код для файлу src/components/AppBar/AppBar.jsx:
+import { useSelector } from &#039;react-redux&#039;;
+import { selectIsLoggedIn } from &#039;../../redux/auth/selectors&#039;;
+import Navigation from &#039;../Navigation/Navigation&#039;;
+import AuthNav from &#039;../AuthNav/AuthNav&#039;;
+import UserMenu from &#039;../UserMenu/UserMenu&#039;;
+
+const AppBar = () =&gt; {
+  const isAuthenticated = useSelector(selectIsLoggedIn);
+
+  return (
+    &lt;header&gt;
+      
+      {!isAuthenticated &amp;&amp; &lt;AuthNav /&gt;}
+      {isAuthenticated &amp;&amp; &lt;UserMenu /&gt;}
+      &lt;Navigation /&gt;
+    &lt;/header&gt;
+  );
+};
+
+export default AppBar;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/AppBar/AppBar.jsx:
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import Navigation from '../Navigation/Navigation';
+import AuthNav from '../AuthNav/AuthNav';
+import UserMenu from '../UserMenu/UserMenu';
+
+const AppBar = () => {
+  const isAuthenticated = useSelector(selectIsLoggedIn);
+
+  return (
+    <header>
+      
+      {!isAuthenticated && <AuthNav />}
+      {isAuthenticated && <UserMenu />}
+      <Navigation />
+    </header>
+  );
+};
+
+export default AppBar;
+
+Існуючий код для файлу src/components/AuthNav/AuthNav.jsx:
+import { NavLink } from &#039;react-router-dom&#039;;
+
+const AuthNav = () =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;NavLink to=&quot;/register&quot;&gt;Register&lt;/NavLink&gt;
+      &lt;span&gt; | &lt;/span&gt;
+      &lt;NavLink to=&quot;/login&quot;&gt;Login&lt;/NavLink&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default AuthNav;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/AuthNav/AuthNav.jsx:
+import { NavLink } from 'react-router-dom';
+
+const AuthNav = () => {
+  return (
+    <div>
+      <NavLink to="/register">Register</NavLink>
+      <span> | </span>
+      <NavLink to="/login">Login</NavLink>
+    </div>
+  );
+};
+
+export default AuthNav;
+
+Існуючий код для файлу src/components/Layout.jsx:
+import PropTypes from &#039;prop-types&#039;;
+import AppBar from &#039;./AppBar/AppBar&#039;; 
+
+const Layout = ({ children }) =&gt; {
+  return (
+    &lt;&gt;
+      &lt;AppBar /&gt; 
+      &lt;main&gt;{children}&lt;/main&gt;
+    &lt;/&gt;
+  );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Layout;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/Layout.jsx:
+import PropTypes from 'prop-types';
+import AppBar from './AppBar/AppBar'; 
+
+const Layout = ({ children }) => {
+  return (
+    <>
+      <AppBar /> 
+      <main>{children}</main>
+    </>
+  );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Layout;
+
+Існуючий код для файлу src/components/Login/Login.jsx:
+import LoginForm from &#039;../LoginForm/LoginForm&#039;;
+
+const Login = () =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Login Page&lt;/h2&gt;
+      &lt;LoginForm /&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Login;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/Login/Login.jsx:
+import LoginForm from '../LoginForm/LoginForm';
+
+const Login = () => {
+  return (
+    <div>
+      <h2>Login Page</h2>
+      <LoginForm />
+    </div>
+  );
+};
+
+export default Login;
+
+Існуючий код для файлу src/components/LoginForm/LoginForm.jsx:
+import { useState } from &#039;react&#039;;
+import { useFormik } from &#039;formik&#039;;
+import * as Yup from &#039;yup&#039;;
+import { useDispatch } from &#039;react-redux&#039;;
+import { login } from &#039;../../redux/auth/operations&#039;;
+import { useNavigate } from &#039;react-router-dom&#039;;
+import &#039;../App&#039;;
+
+const LoginForm = () =&gt; {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+  const [passwordTouched, setPasswordTouched] = useState(false);
+
+  const formik = useFormik({
+    initialValues: {
+      email: &#039;&#039;,
+      password: &#039;&#039;,
+    },
+    validationSchema: Yup.object({
+      email: Yup.string().email(&#039;Invalid email address&#039;).required(&#039;Required&#039;),
+      password: Yup.string().min(6, &#039;Password must be at least 6 characters&#039;).required(&#039;Required&#039;),
+    }),
+    onSubmit: async (values, { setSubmitting, setStatus }) =&gt; {
+      try {
+        await dispatch(login(values)).unwrap();
+        navigate(&#039;/contacts&#039;);
+      } catch (error) {
+        console.error(&#039;Error in login:&#039;, error);
+        setStatus({ error: &#039;Invalid email or password&#039; });
+      } finally {
+        setSubmitting(false);
+      }
+    },
+  });
+
+  const handlePasswordBlur = () =&gt; {
+    setPasswordTouched(true);
+  };
+
+  const handleKeyPress = (e, field) =&gt; {
+    if (e.key === &#039;Enter&#039; || e.key === &#039;Tab&#039;) {
+      formik.handleChange(e);
+      if (!formik.errors[field]) {
+        setShowPassword(true);
+      }
+    }
+    if (field === &#039;password&#039; &amp;&amp; e.key === &#039;Enter&#039;) {
+      setPasswordTouched(true);
+    }
+  };
+
+  return (
+    &lt;form onSubmit={formik.handleSubmit} className=&quot;form&quot;&gt;
+      &lt;label htmlFor=&quot;email&quot;&gt;Email Address&lt;/label&gt;
+      &lt;input
+        id=&quot;email&quot;
+        type=&quot;email&quot;
+        {...formik.getFieldProps(&#039;email&#039;)}
+        onKeyUp={(e) =&gt; handleKeyPress(e, &#039;email&#039;)}
+      /&gt;
+      {formik.touched.email &amp;&amp; formik.errors.email ? (
+        &lt;div&gt;{formik.errors.email}&lt;/div&gt;
+      ) : null}
+
+      {showPassword &amp;&amp; (
+        &lt;&gt;
+          &lt;label htmlFor=&quot;password&quot;&gt;Password&lt;/label&gt;
+          &lt;input
+            id=&quot;password&quot;
+            type=&quot;password&quot;
+            {...formik.getFieldProps(&#039;password&#039;)}
+            onKeyUp={(e) =&gt; handleKeyPress(e, &#039;password&#039;)}
+            onBlur={handlePasswordBlur}
+          /&gt;
+          {formik.touched.password &amp;&amp; formik.errors.password ? (
+            &lt;div&gt;{formik.errors.password}&lt;/div&gt;
+          ) : null}
+        &lt;/&gt;
+      )}
+
+      {passwordTouched &amp;&amp; (
+        &lt;button type=&quot;submit&quot; className=&quot;button&quot;&gt;Login&lt;/button&gt;
+
+      )}
+
+      {formik.status &amp;&amp; formik.status.error &amp;&amp; (
+        &lt;div&gt;{formik.status.error}&lt;/div&gt;
+      )}
+    &lt;/form&gt;
+  );
+};
+
+export default LoginForm;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/LoginForm/LoginForm.jsx:
+import { useState } from 'react';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
+import { login } from '../../redux/auth/operations';
+import { useNavigate } from 'react-router-dom';
+import '../App';
+
+const LoginForm = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+  const [passwordTouched, setPasswordTouched] = useState(false);
+
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validationSchema: Yup.object({
+      email: Yup.string().email('Invalid email address').required('Required'),
+      password: Yup.string().min(6, 'Password must be at least 6 characters').required('Required'),
+    }),
+    onSubmit: async (values, { setSubmitting, setStatus }) => {
+      try {
+        await dispatch(login(values)).unwrap();
+        navigate('/contacts');
+      } catch (error) {
+        console.error('Error in login:', error);
+        setStatus({ error: 'Invalid email or password' });
+      } finally {
+        setSubmitting(false);
+      }
+    },
+  });
+
+  const handlePasswordBlur = () => {
+    setPasswordTouched(true);
+  };
+
+  const handleKeyPress = (e, field) => {
+    if (e.key === 'Enter' || e.key === 'Tab') {
+      formik.handleChange(e);
+      if (!formik.errors[field]) {
+        setShowPassword(true);
+      }
+    }
+    if (field === 'password' && e.key === 'Enter') {
+      setPasswordTouched(true);
+    }
+  };
+
+  return (
+    <form onSubmit={formik.handleSubmit} className="form">
+      <label htmlFor="email">Email Address</label>
+      <input
+        id="email"
+        type="email"
+        {...formik.getFieldProps('email')}
+        onKeyUp={(e) => handleKeyPress(e, 'email')}
+      />
+      {formik.touched.email && formik.errors.email ? (
+        <div>{formik.errors.email}</div>
+      ) : null}
+
+      {showPassword && (
+        <>
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            {...formik.getFieldProps('password')}
+            onKeyUp={(e) => handleKeyPress(e, 'password')}
+            onBlur={handlePasswordBlur}
+          />
+          {formik.touched.password && formik.errors.password ? (
+            <div>{formik.errors.password}</div>
+          ) : null}
+        </>
+      )}
+
+      {passwordTouched && (
+        <button type="submit" className="button">Login</button>
+
+      )}
+
+      {formik.status && formik.status.error && (
+        <div>{formik.status.error}</div>
+      )}
+    </form>
+  );
+};
+
+export default LoginForm;
+
+Існуючий код для файлу src/components/LogoutButton.jsx:
+import { useDispatch, useSelector } from &#039;react-redux&#039;;
+import { logOut } from &#039;../redux/auth/operations&#039;;
+import { selectUser } from &#039;../redux/auth/selectors&#039;;
+import { useNavigate } from &#039;react-router-dom&#039;;
+import axios from &#039;axios&#039;;
+
+const LogoutButton = () =&gt; {
+  const currentUser = useSelector(selectUser);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () =&gt; {
+    dispatch(logOut()) 
+      .then(() =&gt; {
+        localStorage.removeItem(&#039;token&#039;);
+        axios.defaults.headers.common[&#039;Authorization&#039;] = &#039;&#039;;
+        navigate(&#039;/login&#039;);
+      })
+      .catch(error =&gt; {
+        console.error(&#039;Logout failed:&#039;, error);
+      });
+  };
+
+  return (
+    &lt;div&gt;
+      {currentUser &amp;&amp; &lt;span&gt;Welcome, {currentUser.name}!&lt;/span&gt;}
+      &lt;button onClick={handleLogout}&gt;Logout&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default LogoutButton;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/LogoutButton.jsx:
+import { useDispatch, useSelector } from 'react-redux';
+import { logOut } from '../redux/auth/operations';
+import { selectUser } from '../redux/auth/selectors';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
+const LogoutButton = () => {
+  const currentUser = useSelector(selectUser);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    dispatch(logOut()) 
+      .then(() => {
+        localStorage.removeItem('token');
+        axios.defaults.headers.common['Authorization'] = '';
+        navigate('/login');
+      })
+      .catch(error => {
+        console.error('Logout failed:', error);
+      });
+  };
+
+  return (
+    <div>
+      {currentUser && <span>Welcome, {currentUser.name}!</span>}
+      <button onClick={handleLogout}>Logout</button>
+    </div>
+  );
+};
+
+export default LogoutButton;
+
+Існуючий код для файлу src/components/Navigation/Navigation.jsx:
+import { NavLink } from &#039;react-router-dom&#039;;
+import { useSelector } from &#039;react-redux&#039;;
+import { selectIsLoggedIn } from &#039;../../redux/auth/selectors&#039;;
+
+const Navigation = () =&gt; {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
+  return (
+    &lt;nav&gt;
+      &lt;NavLink to=&quot;/&quot;&gt;Home&lt;/NavLink&gt;
+      {isLoggedIn ? (
+        &lt;&gt;
+          &lt;NavLink to=&quot;/contacts&quot;&gt;Contacts&lt;/NavLink&gt;
+        &lt;/&gt;
+      ) : (
+        &lt;&gt;
+          &lt;NavLink to=&quot;/register&quot;&gt;Register&lt;/NavLink&gt;
+          &lt;span&gt; | &lt;/span&gt;
+          &lt;NavLink to=&quot;/login&quot;&gt;Login&lt;/NavLink&gt;
+        &lt;/&gt;
+      )}
+    &lt;/nav&gt;
+  );
+};
+
+export default Navigation;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/Navigation/Navigation.jsx:
+import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
+
+const Navigation = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
+  return (
+    <nav>
+      <NavLink to="/">Home</NavLink>
+      {isLoggedIn ? (
+        <>
+          <NavLink to="/contacts">Contacts</NavLink>
+        </>
+      ) : (
+        <>
+          <NavLink to="/register">Register</NavLink>
+          <span> | </span>
+          <NavLink to="/login">Login</NavLink>
+        </>
+      )}
+    </nav>
+  );
+};
+
+export default Navigation;
+
+Існуючий код для файлу src/components/PrivateRoute.jsx:
+import { Navigate } from &#039;react-router-dom&#039;;
+import { useSelector } from &#039;react-redux&#039;;
+import { selectIsLoggedIn, selectIsRefreshing } from &#039;../redux/auth/selectors&#039;;
+import PropTypes from &#039;prop-types&#039;;
+
+const PrivateRoute = ({ children, redirectTo = &#039;/login&#039; }) =&gt; {
+  const isAuthenticated = useSelector(selectIsLoggedIn);
+  const isRefreshing = useSelector(selectIsRefreshing);
+
+  // Показуємо індикатор завантаження поки відбувається перевірка токена
+  if (isRefreshing) {
+    return &lt;div&gt;Loading...&lt;/div&gt;;
+  }
+
+  // Якщо користувач не аутентифікований, перенаправляємо його на сторінку логіну
+  return isAuthenticated ? children : &lt;Navigate to={redirectTo} /&gt;;
+};
+
+PrivateRoute.propTypes = {
+  children: PropTypes.node.isRequired,
+  redirectTo: PropTypes.string
+};
+
+export default PrivateRoute;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/PrivateRoute.jsx:
+import { Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn, selectIsRefreshing } from '../redux/auth/selectors';
+import PropTypes from 'prop-types';
+
+const PrivateRoute = ({ children, redirectTo = '/login' }) => {
+  const isAuthenticated = useSelector(selectIsLoggedIn);
+  const isRefreshing = useSelector(selectIsRefreshing);
+
+  // Показуємо індикатор завантаження поки відбувається перевірка токена
+  if (isRefreshing) {
+    return <div>Loading...</div>;
+  }
+
+  // Якщо користувач не аутентифікований, перенаправляємо його на сторінку логіну
+  return isAuthenticated ? children : <Navigate to={redirectTo} />;
+};
+
+PrivateRoute.propTypes = {
+  children: PropTypes.node.isRequired,
+  redirectTo: PropTypes.string
+};
+
+export default PrivateRoute;
+
+Існуючий код для файлу src/components/Registration/Registration.jsx:
+import RegistrationForm from &#039;../RegistrationForm/RegistrationForm&#039;;
+
+const Registration = () =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Registration Page&lt;/h2&gt;
+      &lt;RegistrationForm /&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Registration;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/Registration/Registration.jsx:
+import RegistrationForm from '../RegistrationForm/RegistrationForm';
+
+const Registration = () => {
+  return (
+    <div>
+      <h2>Registration Page</h2>
+      <RegistrationForm />
+    </div>
+  );
+};
+
+export default Registration;
+
+Існуючий код для файлу src/components/RegistrationForm/RegistrationForm.jsx:
+import { useState } from &#039;react&#039;;
+import { useFormik } from &#039;formik&#039;;
+import * as Yup from &#039;yup&#039;;
+import { useDispatch } from &#039;react-redux&#039;;
+import { register } from &#039;../../redux/auth/operations&#039;;
+import { useNavigate } from &#039;react-router-dom&#039;;
+import &#039;../App&#039;;
+
+const RegistrationForm = () =&gt; {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showName, setShowName] = useState(false);
+  const [showRegisterButton, setShowRegisterButton] = useState(false);
+
+  const formik = useFormik({
+    initialValues: {
+      email: &#039;&#039;,
+      password: &#039;&#039;,
+      name: &#039;&#039;,
+    },
+    validationSchema: Yup.object({
+      email: Yup.string().email(&#039;Invalid email address&#039;).required(&#039;Required&#039;),
+      password: Yup.string().min(7, &#039;Password must be at least 7 characters&#039;).required(&#039;Required&#039;),
+      name: Yup.string().required(&#039;Required&#039;),
+    }),
+    onSubmit: async (values, { setSubmitting, setStatus }) =&gt; {
+      try {
+        await dispatch(register(values)).unwrap();
+        setStatus({ success: &#039;Registration successful!&#039; });
+        navigate(&#039;/contacts&#039;);
+      } catch (error) {
+          setStatus({ error: &#039;Email already registered. Please log in.&#039; });
+          navigate(&#039;/login&#039;);
+      } finally {
+        setSubmitting(false);
+      }
+    },
+  });
+
+  const handleKeyPress = (e, field) =&gt; {
+    if (e.key === &#039;Enter&#039; || e.key === &#039;Tab&#039;) {
+      formik.handleChange(e);
+      if (!formik.errors[field]) {
+        if (field === &#039;email&#039;) {
+          setShowPassword(true);
+        } else if (field === &#039;password&#039;) {
+          setShowName(true);
+        } else if (field === &#039;name&#039;) {
+          setShowRegisterButton(true);
+        }
+      }
+    }
+  };
+
+  return (
+    &lt;form onSubmit={formik.handleSubmit} className=&quot;form&quot;&gt;
+      &lt;label htmlFor=&quot;email&quot;&gt;Email Address&lt;/label&gt;
+      &lt;input
+        id=&quot;email&quot;
+        type=&quot;email&quot;
+        {...formik.getFieldProps(&#039;email&#039;)}
+        onKeyUp={(e) =&gt; handleKeyPress(e, &#039;email&#039;)}
+      /&gt;
+      {formik.touched.email &amp;&amp; formik.errors.email ? (
+        &lt;div&gt;{formik.errors.email}&lt;/div&gt;
+      ) : null}
+
+      {showPassword &amp;&amp; (
+        &lt;&gt;
+          &lt;label htmlFor=&quot;password&quot;&gt;Password&lt;/label&gt;
+          &lt;input
+            id=&quot;password&quot;
+            type=&quot;password&quot;
+            {...formik.getFieldProps(&#039;password&#039;)}
+            onKeyUp={(e) =&gt; handleKeyPress(e, &#039;password&#039;)}
+          /&gt;
+          {formik.touched.password &amp;&amp; formik.errors.password ? (
+            &lt;div&gt;{formik.errors.password}&lt;/div&gt;
+          ) : null}
+        &lt;/&gt;
+      )}
+
+      {showName &amp;&amp; (
+        &lt;&gt;
+          &lt;label htmlFor=&quot;name&quot;&gt;Name&lt;/label&gt;
+          &lt;input
+            id=&quot;name&quot;
+            type=&quot;text&quot;
+            {...formik.getFieldProps(&#039;name&#039;)}
+            onKeyUp={(e) =&gt; handleKeyPress(e, &#039;name&#039;)}
+          /&gt;
+          {formik.touched.name &amp;&amp; formik.errors.name ? (
+            &lt;div&gt;{formik.errors.name}&lt;/div&gt;
+          ) : null}
+        &lt;/&gt;
+      )}
+
+      {showRegisterButton &amp;&amp; (
+         
+        &lt;button type=&quot;submit&quot; className=&quot;button&quot;&gt;Register&lt;/button&gt;
+         
+      )}
+
+      {formik.status &amp;&amp; formik.status.error &amp;&amp; (
+        &lt;div&gt;{formik.status.error}&lt;/div&gt;
+      )}
+    &lt;/form&gt;
+  );
+};
+
+export default RegistrationForm;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/RegistrationForm/RegistrationForm.jsx:
+import { useState } from 'react';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
+import { register } from '../../redux/auth/operations';
+import { useNavigate } from 'react-router-dom';
+import '../App';
+
+const RegistrationForm = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showName, setShowName] = useState(false);
+  const [showRegisterButton, setShowRegisterButton] = useState(false);
+
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+      name: '',
+    },
+    validationSchema: Yup.object({
+      email: Yup.string().email('Invalid email address').required('Required'),
+      password: Yup.string().min(7, 'Password must be at least 7 characters').required('Required'),
+      name: Yup.string().required('Required'),
+    }),
+    onSubmit: async (values, { setSubmitting, setStatus }) => {
+      try {
+        await dispatch(register(values)).unwrap();
+        setStatus({ success: 'Registration successful!' });
+        navigate('/contacts');
+      } catch (error) {
+          setStatus({ error: 'Email already registered. Please log in.' });
+          navigate('/login');
+      } finally {
+        setSubmitting(false);
+      }
+    },
+  });
+
+  const handleKeyPress = (e, field) => {
+    if (e.key === 'Enter' || e.key === 'Tab') {
+      formik.handleChange(e);
+      if (!formik.errors[field]) {
+        if (field === 'email') {
+          setShowPassword(true);
+        } else if (field === 'password') {
+          setShowName(true);
+        } else if (field === 'name') {
+          setShowRegisterButton(true);
+        }
+      }
+    }
+  };
+
+  return (
+    <form onSubmit={formik.handleSubmit} className="form">
+      <label htmlFor="email">Email Address</label>
+      <input
+        id="email"
+        type="email"
+        {...formik.getFieldProps('email')}
+        onKeyUp={(e) => handleKeyPress(e, 'email')}
+      />
+      {formik.touched.email && formik.errors.email ? (
+        <div>{formik.errors.email}</div>
+      ) : null}
+
+      {showPassword && (
+        <>
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            {...formik.getFieldProps('password')}
+            onKeyUp={(e) => handleKeyPress(e, 'password')}
+          />
+          {formik.touched.password && formik.errors.password ? (
+            <div>{formik.errors.password}</div>
+          ) : null}
+        </>
+      )}
+
+      {showName && (
+        <>
+          <label htmlFor="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            {...formik.getFieldProps('name')}
+            onKeyUp={(e) => handleKeyPress(e, 'name')}
+          />
+          {formik.touched.name && formik.errors.name ? (
+            <div>{formik.errors.name}</div>
+          ) : null}
+        </>
+      )}
+
+      {showRegisterButton && (
+         
+        <button type="submit" className="button">Register</button>
+         
+      )}
+
+      {formik.status && formik.status.error && (
+        <div>{formik.status.error}</div>
+      )}
+    </form>
+  );
+};
+
+export default RegistrationForm;
+
+Існуючий код для файлу src/components/RestrictedRoute.jsx:
+import PropTypes from &#039;prop-types&#039;;
+import { Navigate } from &#039;react-router-dom&#039;;
+import { useSelector } from &#039;react-redux&#039;;
+import { selectIsLoggedIn, selectIsRefreshing } from &#039;../redux/auth/selectors&#039;;
+
+const RestrictedRoute = ({ component: Component, redirectTo = &#039;/contacts&#039; }) =&gt; {
+  const isAuthenticated = useSelector(selectIsLoggedIn);
+  const isRefreshing = useSelector(selectIsRefreshing);
+
+  if (isRefreshing) return &lt;div&gt;Loading...&lt;/div&gt;;
+  return !isAuthenticated ? &lt;Component /&gt; : &lt;Navigate to={redirectTo} /&gt;;
+};
+
+RestrictedRoute.propTypes = {
+  component: PropTypes.elementType.isRequired,
+  redirectTo: PropTypes.string,
+};
+
+export default RestrictedRoute;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/RestrictedRoute.jsx:
+import PropTypes from 'prop-types';
+import { Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn, selectIsRefreshing } from '../redux/auth/selectors';
+
+const RestrictedRoute = ({ component: Component, redirectTo = '/contacts' }) => {
+  const isAuthenticated = useSelector(selectIsLoggedIn);
+  const isRefreshing = useSelector(selectIsRefreshing);
+
+  if (isRefreshing) return <div>Loading...</div>;
+  return !isAuthenticated ? <Component /> : <Navigate to={redirectTo} />;
+};
+
+RestrictedRoute.propTypes = {
+  component: PropTypes.elementType.isRequired,
+  redirectTo: PropTypes.string,
+};
+
+export default RestrictedRoute;
+
+Існуючий код для файлу src/components/SearchBox/SearchBox.jsx:
+import { useDispatch, useSelector } from &#039;react-redux&#039;;
+import { changeFilter, selectFilter } from &#039;../../redux/contacts/selectors&#039;;
+import styles from &#039;./SearchBox.module.css&#039;;
+
+const SearchBox = () =&gt; {
+  const filter = useSelector(selectFilter);
+  const dispatch = useDispatch();
+
+  const handleChange = (e) =&gt; {
+    dispatch(changeFilter(e.target.value));
+  };
+
+  return (
+    &lt;div className={styles.searchBox}&gt;
+      &lt;input
+        type=&quot;text&quot;
+        value={filter}
+        onChange={handleChange}
+        className={styles.input}
+        placeholder=&quot;Search contacts by name&quot;
+      /&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default SearchBox;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/SearchBox/SearchBox.jsx:
+import { useDispatch, useSelector } from 'react-redux';
+import { changeFilter, selectFilter } from '../../redux/contacts/selectors';
+import styles from './SearchBox.module.css';
+
+const SearchBox = () => {
+  const filter = useSelector(selectFilter);
+  const dispatch = useDispatch();
+
+  const handleChange = (e) => {
+    dispatch(changeFilter(e.target.value));
+  };
+
+  return (
+    <div className={styles.searchBox}>
+      <input
+        type="text"
+        value={filter}
+        onChange={handleChange}
+        className={styles.input}
+        placeholder="Search contacts by name"
+      />
+    </div>
+  );
+};
+
+export default SearchBox;
+
+Існуючий код для файлу src/components/SearchBox/SearchBox.module.css:
+.searchBox {
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/SearchBox/SearchBox.module.css:
+.searchBox {
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+Існуючий код для файлу src/components/Task/Task.jsx:
+import { useEffect } from &#039;react&#039;;
+import { useSelector, useDispatch } from &#039;react-redux&#039;;
+import { useNavigate } from &#039;react-router-dom&#039;;
+import ContactForm from &#039;../TaskForm/TaskForm&#039;;
+import ContactList from &#039;../TaskList/TaskList&#039;;
+import SearchBox from &#039;../SearchBox/SearchBox&#039;;
+import LogoutButton from &#039;../LogoutButton&#039;;
+import { selectIsLoggedIn } from &#039;../../redux/auth/selectors&#039;;
+import { fetchContacts } from &#039;../../redux/contacts/operations&#039;;
+import { selectContactsError } from &#039;../../redux/contacts/selectors&#039;;
+
+const Contacts = () =&gt; {
+  const isAuthenticated = useSelector(selectIsLoggedIn);
+  const error = useSelector(selectContactsError);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() =&gt; {
+    if (!isAuthenticated) {
+      navigate(&#039;/login&#039;);
+    } else {
+      dispatch(fetchContacts());
+    }
+  }, [isAuthenticated, navigate, dispatch]);
+
+  // Перевірка на помилку перед виведенням основного контенту
+  if (error) return &lt;div&gt;Error: {error}&lt;/div&gt;;
+
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Contacts Book&lt;/h1&gt;
+      &lt;LogoutButton /&gt;
+      &lt;ContactForm /&gt;
+      &lt;SearchBox /&gt;
+      &lt;ContactList /&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Contacts;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/Task/Task.jsx:
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import ContactForm from '../TaskForm/TaskForm';
+import ContactList from '../TaskList/TaskList';
+import SearchBox from '../SearchBox/SearchBox';
+import LogoutButton from '../LogoutButton';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import { fetchContacts } from '../../redux/contacts/operations';
+import { selectContactsError } from '../../redux/contacts/selectors';
+
+const Contacts = () => {
+  const isAuthenticated = useSelector(selectIsLoggedIn);
+  const error = useSelector(selectContactsError);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/login');
+    } else {
+      dispatch(fetchContacts());
+    }
+  }, [isAuthenticated, navigate, dispatch]);
+
+  // Перевірка на помилку перед виведенням основного контенту
+  if (error) return <div>Error: {error}</div>;
+
+  return (
+    <div>
+      <h1>Contacts Book</h1>
+      <LogoutButton />
+      <ContactForm />
+      <SearchBox />
+      <ContactList />
+    </div>
+  );
+};
+
+export default Contacts;
+
+Існуючий код для файлу src/components/TaskEditor/TaskEditor.jsx:
+import { useFormik } from &#039;formik&#039;;
+import * as Yup from &#039;yup&#039;;
+import { useDispatch } from &#039;react-redux&#039;;
+import { editContact } from &#039;../../redux/contacts/operations&#039;;
+import styles from &#039;./TaskEditor.module.css&#039;;
+import PropTypes from &#039;prop-types&#039;; 
+
+const EditContactForm = ({ contact, onClose }) =&gt; {
+  const dispatch = useDispatch();
+  const formik = useFormik({
+    initialValues: {
+      name: contact.name,
+      number: contact.number,
+    },
+    validationSchema: Yup.object({
+      name: Yup.string()
+        .required(&#039;Required&#039;)
+        .min(3, &#039;Name must be at least 3 characters&#039;)
+        .max(15, &#039;Name must be no longer than 15 characters&#039;),
+      number: Yup.string()
+        .required(&#039;Required&#039;)
+        .matches(/^\+?\d{10,15}$/, &#039;Invalid phone number&#039;),
+    }),
+    onSubmit: (values) =&gt; {
+      dispatch(editContact({ id: contact.id, data: values }));
+      onClose();
+    },
+    
+  });
+
+  return (
+    &lt;form onSubmit={formik.handleSubmit} className={styles.editContactForm}&gt;
+      &lt;label className={styles.label}&gt;
+        Name
+        &lt;input
+          type=&quot;text&quot;
+          name=&quot;name&quot;
+          value={formik.values.name}
+          onChange={formik.handleChange}
+          className={styles.input}
+        /&gt;
+      &lt;/label&gt;
+      &lt;label className={styles.label}&gt;
+        Number
+        &lt;input
+          type=&quot;text&quot;
+          name=&quot;number&quot;
+          value={formik.values.number}
+          onChange={formik.handleChange}
+          className={styles.input}
+        /&gt;
+      &lt;/label&gt;
+      &lt;button type=&quot;submit&quot; className={styles.button}&gt;Save&lt;/button&gt;
+      &lt;button type=&quot;button&quot; onClick={onClose} className={styles.button}&gt;Cancel&lt;/button&gt;
+    &lt;/form&gt;
+  );
+};
+
+EditContactForm.propTypes = {
+    contact: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    }).isRequired,
+    onClose: PropTypes.func.isRequired,
+  };
+
+  
+export default EditContactForm;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/TaskEditor/TaskEditor.jsx:
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
+import { editContact } from '../../redux/contacts/operations';
+import styles from './TaskEditor.module.css';
+import PropTypes from 'prop-types'; 
+
+const EditContactForm = ({ contact, onClose }) => {
+  const dispatch = useDispatch();
+  const formik = useFormik({
+    initialValues: {
+      name: contact.name,
+      number: contact.number,
+    },
+    validationSchema: Yup.object({
+      name: Yup.string()
+        .required('Required')
+        .min(3, 'Name must be at least 3 characters')
+        .max(15, 'Name must be no longer than 15 characters'),
+      number: Yup.string()
+        .required('Required')
+        .matches(/^\+?\d{10,15}$/, 'Invalid phone number'),
+    }),
+    onSubmit: (values) => {
+      dispatch(editContact({ id: contact.id, data: values }));
+      onClose();
+    },
+    
+  });
+
+  return (
+    <form onSubmit={formik.handleSubmit} className={styles.editContactForm}>
+      <label className={styles.label}>
+        Name
+        <input
+          type="text"
+          name="name"
+          value={formik.values.name}
+          onChange={formik.handleChange}
+          className={styles.input}
+        />
+      </label>
+      <label className={styles.label}>
+        Number
+        <input
+          type="text"
+          name="number"
+          value={formik.values.number}
+          onChange={formik.handleChange}
+          className={styles.input}
+        />
+      </label>
+      <button type="submit" className={styles.button}>Save</button>
+      <button type="button" onClick={onClose} className={styles.button}>Cancel</button>
+    </form>
+  );
+};
+
+EditContactForm.propTypes = {
+    contact: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    }).isRequired,
+    onClose: PropTypes.func.isRequired,
+  };
+
+  
+export default EditContactForm;
+
+Існуючий код для файлу src/components/TaskEditor/TaskEditor.module.css:
+.editContactForm {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.button {
+  width: auto;
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.button.cancel {
+  background-color: #f44336;
+}
+
+.button.cancel:hover {
+  background-color: #d32f2f;
+}
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/TaskEditor/TaskEditor.module.css:
+.editContactForm {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.button {
+  width: auto;
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.button.cancel {
+  background-color: #f44336;
+}
+
+.button.cancel:hover {
+  background-color: #d32f2f;
+}
+
+Існуючий код для файлу src/components/TaskForm/TaskForm.jsx:
+import { useFormik } from &#039;formik&#039;;
+import * as Yup from &#039;yup&#039;;
+import { useDispatch } from &#039;react-redux&#039;;
+import { addContact } from &#039;../../redux/contacts/operations&#039;;
+import styles from &#039;./TaskForm.module.css&#039;;
+import PhoneInput from &#039;react-phone-number-input&#039;;
+import &#039;react-phone-number-input/style.css&#039;;
+
+const validationSchema = Yup.object({
+  name: Yup.string()
+    .required(&#039;Required&#039;)
+    .min(3, &#039;Name must be at least 3 characters&#039;)
+    .max(15, &#039;Name must be no longer than 15 characters&#039;),
+  number: Yup.string()
+    .required(&#039;Required&#039;)
+    .matches(/^\+?\d{10,15}$/, &#039;Invalid phone number&#039;),
+});
+
+const ContactForm = () =&gt; {
+  const dispatch = useDispatch();
+  const formik = useFormik({
+    initialValues: {
+      name: &#039;&#039;,
+      number: &#039;&#039;,
+    },
+    validationSchema,
+    onSubmit: (values, { resetForm }) =&gt; {
+      dispatch(addContact(values));     
+      resetForm();
+    },
+    
+  });
+
+  return (
+    &lt;form onSubmit={formik.handleSubmit} className={styles.contactForm}&gt;
+      &lt;label className={styles.label}&gt;
+        Name
+        &lt;input
+          type=&quot;text&quot;
+          name=&quot;name&quot;
+          value={formik.values.name}
+          onChange={formik.handleChange}
+          className={styles.input}
+        /&gt;
+        {formik.touched.name &amp;&amp; formik.errors.name ? (
+          &lt;div&gt;{formik.errors.name}&lt;/div&gt;
+        ) : null}
+      &lt;/label&gt;
+      &lt;label className={styles.label}&gt;
+        Number
+        &lt;PhoneInput
+          international
+          defaultCountry=&quot;US&quot;
+          value={formik.values.number}
+          onChange={(value) =&gt; formik.setFieldValue(&#039;number&#039;, value)}
+          className={styles.phone_input}
+        /&gt;
+        {formik.touched.number &amp;&amp; formik.errors.number ? (
+          &lt;div&gt;{formik.errors.number}&lt;/div&gt;
+        ) : null}
+      &lt;/label&gt;
+      &lt;button type=&quot;submit&quot; className={styles.button}&gt;
+        Add contact
+      &lt;/button&gt;
+    &lt;/form&gt;
+  );
+};
+
+export default ContactForm;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/TaskForm/TaskForm.jsx:
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
+import { addContact } from '../../redux/contacts/operations';
+import styles from './TaskForm.module.css';
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
+
+const validationSchema = Yup.object({
+  name: Yup.string()
+    .required('Required')
+    .min(3, 'Name must be at least 3 characters')
+    .max(15, 'Name must be no longer than 15 characters'),
+  number: Yup.string()
+    .required('Required')
+    .matches(/^\+?\d{10,15}$/, 'Invalid phone number'),
+});
+
+const ContactForm = () => {
+  const dispatch = useDispatch();
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      number: '',
+    },
+    validationSchema,
+    onSubmit: (values, { resetForm }) => {
+      dispatch(addContact(values));     
+      resetForm();
+    },
+    
+  });
+
+  return (
+    <form onSubmit={formik.handleSubmit} className={styles.contactForm}>
+      <label className={styles.label}>
+        Name
+        <input
+          type="text"
+          name="name"
+          value={formik.values.name}
+          onChange={formik.handleChange}
+          className={styles.input}
+        />
+        {formik.touched.name && formik.errors.name ? (
+          <div>{formik.errors.name}</div>
+        ) : null}
+      </label>
+      <label className={styles.label}>
+        Number
+        <PhoneInput
+          international
+          defaultCountry="US"
+          value={formik.values.number}
+          onChange={(value) => formik.setFieldValue('number', value)}
+          className={styles.phone_input}
+        />
+        {formik.touched.number && formik.errors.number ? (
+          <div>{formik.errors.number}</div>
+        ) : null}
+      </label>
+      <button type="submit" className={styles.button}>
+        Add contact
+      </button>
+    </form>
+  );
+};
+
+export default ContactForm;
+
+Існуючий код для файлу src/components/TaskForm/TaskForm.module.css:
+.contactForm {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.phone_input {
+  width: 80%;
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 85%;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/TaskForm/TaskForm.module.css:
+.contactForm {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.phone_input {
+  width: 80%;
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 85%;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+Існуючий код для файлу src/components/TaskList/TaskList.jsx:
+import { useState } from &#039;react&#039;;
+import { useSelector, useDispatch } from &#039;react-redux&#039;;
+import { selectFilter } from &#039;../../redux/contacts/selectors&#039;;
+import { deleteContact } from &#039;../../redux/contacts/operations&#039;;
+import EditContactForm from &#039;../TaskEditor/TaskEditor&#039;;
+import styles from &#039;./TaskList.module.css&#039;;
+
+const ContactList = () =&gt; {
+  const [editingContactId, setEditingContactId] = useState(null);
+  const contacts = useSelector(selectFilter);
+  const dispatch = useDispatch();
+
+  const handleDelete = (id) =&gt; {
+    dispatch(deleteContact(id));
+  };
+  
+  const handleEdit = (id) =&gt; {
+    setEditingContactId(id);
+  };
+  
+
+  const handleCloseEditForm = () =&gt; {
+    setEditingContactId(null);
+  };
+
+  return (
+    &lt;ul className={styles.list}&gt;
+      {contacts.map(({ id, name, number }) =&gt; (
+        &lt;li key={id} className={styles.item}&gt;
+          {editingContactId === id ? (
+            &lt;EditContactForm contact={{ id, name, number }} onClose={handleCloseEditForm} /&gt;
+          ) : (
+            &lt;&gt;
+              &lt;p&gt;{name}: {number}&lt;/p&gt;
+              &lt;button onClick={() =&gt; handleEdit(id)} className={styles.button}&gt;Edit&lt;/button&gt;
+              &lt;button onClick={() =&gt; handleDelete(id)} className={styles.button}&gt;Delete&lt;/button&gt;
+            &lt;/&gt;
+          )}
+        &lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+};
+
+export default ContactList;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/TaskList/TaskList.jsx:
+import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectFilter } from '../../redux/contacts/selectors';
+import { deleteContact } from '../../redux/contacts/operations';
+import EditContactForm from '../TaskEditor/TaskEditor';
+import styles from './TaskList.module.css';
+
+const ContactList = () => {
+  const [editingContactId, setEditingContactId] = useState(null);
+  const contacts = useSelector(selectFilter);
+  const dispatch = useDispatch();
+
+  const handleDelete = (id) => {
+    dispatch(deleteContact(id));
+  };
+  
+  const handleEdit = (id) => {
+    setEditingContactId(id);
+  };
+  
+
+  const handleCloseEditForm = () => {
+    setEditingContactId(null);
+  };
+
+  return (
+    <ul className={styles.list}>
+      {contacts.map(({ id, name, number }) => (
+        <li key={id} className={styles.item}>
+          {editingContactId === id ? (
+            <EditContactForm contact={{ id, name, number }} onClose={handleCloseEditForm} />
+          ) : (
+            <>
+              <p>{name}: {number}</p>
+              <button onClick={() => handleEdit(id)} className={styles.button}>Edit</button>
+              <button onClick={() => handleDelete(id)} className={styles.button}>Delete</button>
+            </>
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export default ContactList;
+
+Існуючий код для файлу src/components/TaskList/TaskList.module.css:
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #d32f2f;
+}
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/TaskList/TaskList.module.css:
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #d32f2f;
+}
+
+Існуючий код для файлу src/components/UserMenu/UserMenu.jsx:
+import { useDispatch, useSelector } from &#039;react-redux&#039;;
+import { logOut } from &#039;../../redux/auth/operations&#039;; 
+import { selectUser } from &#039;../../redux/auth/selectors&#039;;
+import { useNavigate } from &#039;react-router-dom&#039;;
+
+const UserMenu = () =&gt; {
+  const currentUser = useSelector(selectUser);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () =&gt; {
+    dispatch(logOut()) 
+      .then(() =&gt; {
+        navigate(&#039;/login&#039;);
+      })
+      .catch(error =&gt; {
+        console.error(&#039;Logout failed:&#039;, error);
+      });
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;span&gt;Welcome, {currentUser ? currentUser.name : &#039;Guest&#039;}&lt;/span&gt;
+      &lt;button onClick={handleLogout}&gt;Logout&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default UserMenu;
+
+Відкат буде здійснено до наступної версії коду для файлу src/components/UserMenu/UserMenu.jsx:
+import { useDispatch, useSelector } from 'react-redux';
+import { logOut } from '../../redux/auth/operations'; 
+import { selectUser } from '../../redux/auth/selectors';
+import { useNavigate } from 'react-router-dom';
+
+const UserMenu = () => {
+  const currentUser = useSelector(selectUser);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    dispatch(logOut()) 
+      .then(() => {
+        navigate('/login');
+      })
+      .catch(error => {
+        console.error('Logout failed:', error);
+      });
+  };
+
+  return (
+    <div>
+      <span>Welcome, {currentUser ? currentUser.name : 'Guest'}</span>
+      <button onClick={handleLogout}>Logout</button>
+    </div>
+  );
+};
+
+export default UserMenu;
+
+Існуючий код для файлу src/index.css:
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #272d8f;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+Відкат буде здійснено до наступної версії коду для файлу src/index.css:
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #272d8f;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+Існуючий код для файлу src/main.jsx:
+import React from &#039;react&#039;;
+import ReactDOM from &#039;react-dom/client&#039;;
+import axios from &#039;axios&#039;;
+import { BrowserRouter } from &#039;react-router-dom&#039;;
+import App from &#039;../src/components/App&#039;;
+import &#039;./index.css&#039;;
+import { Provider } from &#039;react-redux&#039;; 
+import { store, persistor } from &#039;./redux/store&#039;; 
+import { PersistGate } from &#039;redux-persist/integration/react&#039;;
+
+const token = localStorage.getItem(&#039;token&#039;);
+if (token) {
+  axios.defaults.headers.common[&#039;Authorization&#039;] = `Bearer ${token}`;
+}
+
+const root = ReactDOM.createRoot(document.getElementById(&#039;root&#039;));
+root.render(
+  &lt;React.StrictMode&gt;
+    &lt;Provider store={store}&gt;
+      &lt;PersistGate loading={null} persistor={persistor}&gt;
+        &lt;BrowserRouter&gt;
+          &lt;App /&gt;
+        &lt;/BrowserRouter&gt;
+      &lt;/PersistGate&gt;
+    &lt;/Provider&gt;
+  &lt;/React.StrictMode&gt;
+);
+
+Відкат буде здійснено до наступної версії коду для файлу src/main.jsx:
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import axios from 'axios';
+import { BrowserRouter } from 'react-router-dom';
+import App from '../src/components/App';
+import './index.css';
+import { Provider } from 'react-redux'; 
+import { store, persistor } from './redux/store'; 
+import { PersistGate } from 'redux-persist/integration/react';
+
+const token = localStorage.getItem('token');
+if (token) {
+  axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
+  </React.StrictMode>
+);
+
+Існуючий код для файлу src/pages/Contacts.jsx:
+import { NavLink } from &#039;react-router-dom&#039;;
+import Contacts from &#039;../components/Task/Task&#039;;
+
+const ContactsPage = () =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Contacts /&gt;
+      &lt;NavLink to=&quot;/&quot; className=&quot;home-link&quot;&gt;Home&lt;/NavLink&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default ContactsPage;
+
+Відкат буде здійснено до наступної версії коду для файлу src/pages/Contacts.jsx:
+import { NavLink } from 'react-router-dom';
+import Contacts from '../components/Task/Task';
+
+const ContactsPage = () => {
+  return (
+    <div>
+      <Contacts />
+      <NavLink to="/" className="home-link">Home</NavLink>
+    </div>
+  );
+};
+
+export default ContactsPage;
+
+Існуючий код для файлу src/pages/Home.jsx:
+import { useSelector } from &#039;react-redux&#039;;
+import { selectIsLoggedIn } from &#039;../redux/auth/selectors&#039;;
+import AuthNav from &#039;../components/AuthNav/AuthNav&#039;;
+import UserMenu from &#039;../components/UserMenu/UserMenu&#039;;
+import { NavLink } from &#039;react-router-dom&#039;;
+
+const HomePage = () =&gt; {
+  const isAuthenticated = useSelector(selectIsLoggedIn);
+
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Welcome to the Contacts Book App&lt;/h1&gt;
+      &lt;p&gt;This is the home page of your application.&lt;/p&gt;
+      {!isAuthenticated ? &lt;AuthNav /&gt; : &lt;UserMenu /&gt;}
+      {isAuthenticated &amp;&amp; &lt;NavLink to=&quot;/contacts&quot;&gt;Go to Contacts&lt;/NavLink&gt;}
+    &lt;/div&gt;
+  );
+};
+
+export default HomePage;
+
+Відкат буде здійснено до наступної версії коду для файлу src/pages/Home.jsx:
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../redux/auth/selectors';
+import AuthNav from '../components/AuthNav/AuthNav';
+import UserMenu from '../components/UserMenu/UserMenu';
+import { NavLink } from 'react-router-dom';
+
+const HomePage = () => {
+  const isAuthenticated = useSelector(selectIsLoggedIn);
+
+  return (
+    <div>
+      <h1>Welcome to the Contacts Book App</h1>
+      <p>This is the home page of your application.</p>
+      {!isAuthenticated ? <AuthNav /> : <UserMenu />}
+      {isAuthenticated && <NavLink to="/contacts">Go to Contacts</NavLink>}
+    </div>
+  );
+};
+
+export default HomePage;
+
+Існуючий код для файлу src/pages/Login.jsx:
+import LoginForm from &#039;../LoginForm/LoginForm&#039;;
+
+const Login = () =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Login Page&lt;/h2&gt;
+      &lt;LoginForm /&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Login;
+
+Відкат буде здійснено до наступної версії коду для файлу src/pages/Login.jsx:
+import LoginForm from '../LoginForm/LoginForm';
+
+const Login = () => {
+  return (
+    <div>
+      <h2>Login Page</h2>
+      <LoginForm />
+    </div>
+  );
+};
+
+export default Login;
+
+Існуючий код для файлу src/pages/Registration.jsx:
+import RegistrationForm from &#039;../RegistrationForm/RegistrationForm&#039;;
+
+const Registration = () =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Registration Page&lt;/h2&gt;
+      &lt;RegistrationForm /&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Registration;
+
+Відкат буде здійснено до наступної версії коду для файлу src/pages/Registration.jsx:
+import RegistrationForm from '../RegistrationForm/RegistrationForm';
+
+const Registration = () => {
+  return (
+    <div>
+      <h2>Registration Page</h2>
+      <RegistrationForm />
+    </div>
+  );
+};
+
+export default Registration;
+
+Існуючий код для файлу vercel.json:
+{
+    &quot;rewrites&quot;: [
+      { &quot;source&quot;: &quot;/(.*)&quot;, &quot;destination&quot;: &quot;/&quot; }
+    ]
+  }
+
+Відкат буде здійснено до наступної версії коду для файлу vercel.json:
+{
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/" }
+    ]
+  }
+

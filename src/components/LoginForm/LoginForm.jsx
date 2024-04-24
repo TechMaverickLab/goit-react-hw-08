@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/auth/operations';
 import { useNavigate } from 'react-router-dom';
-import '../../../src/App';
+import '../App';
 
 const LoginForm = () => {
   const dispatch = useDispatch();

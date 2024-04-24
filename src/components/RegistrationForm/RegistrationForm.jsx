@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
 import { useNavigate } from 'react-router-dom';
-import '../../../src/App';
+import '../App';
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
