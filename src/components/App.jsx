@@ -5,7 +5,7 @@ import PrivateRoute from './PrivateRoute';
 import RestrictedRoute from './RestrictedRoute';
 import Layout from './Layout';
 import { refreshUser } from '../redux/auth/operations';
-import { selectIsRefreshing } from '../redux/auth/selectors'; // Потрібно експортувати та використовувати правильний селектор
+import { selectIsRefreshing } from '../redux/auth/selectors'; 
 import './App.css';
 
 const HomePage = lazy(() => import('../pages/Home'));
@@ -15,14 +15,14 @@ const ContactsPage = lazy(() => import('../pages/Contacts'));
 
 const App = () => {
   const dispatch = useDispatch();
-  const isRefreshing = useSelector(selectIsRefreshing); // Додаємо використання селектора для стану оновлення
+  const isRefreshing = useSelector(selectIsRefreshing); 
 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
   if (isRefreshing) {
-    return <div>Loading...</div>; // Додаємо умовний рендеринг для обробки стану оновлення
+    return <div>Loading...</div>; 
   }
 
   return (

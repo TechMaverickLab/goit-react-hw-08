@@ -22,7 +22,7 @@ const Contacts = () => {
     }
   }, [isAuthenticated, navigate, dispatch]);
 
-  // Перевірка на помилку перед виведенням основного контенту
+  
   if (error) return <div>Error: {error}</div>;
 
   return (

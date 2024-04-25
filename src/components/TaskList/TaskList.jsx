@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectFilter } from '../../redux/contacts/selectors';
+import { selectFilteredContacts } from '../../redux/contacts/selectors';
 import { deleteContact } from '../../redux/contacts/operations';
 import EditContactForm from '../TaskEditor/TaskEditor';
 import styles from './TaskList.module.css';
 
 const ContactList = () => {
   const [editingContactId, setEditingContactId] = useState(null);
-  const contacts = useSelector(selectFilter);
+  const contacts = useSelector(selectFilteredContacts);
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {

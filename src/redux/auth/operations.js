@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
-// Допоміжні функції для управління заголовками авторизації
+
 const setAuthHeader = (token) => {
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 };
